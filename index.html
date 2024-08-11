@@ -36,7 +36,7 @@
 
             <form id="emailForm">
               <label for="#iemail">Email address</label>
-              <input type="email" name="email" id="iemail" placeholder="email@company.com">
+              <input type="text" name="email" id="iemail" placeholder="email@company.com" class="required" >
               
               <input type="submit" value="Subscribe to monthly newsletter" class="btn-subscribe">
             </form>
@@ -63,12 +63,12 @@
         <div class="success-text">
           <h1>Thanks for subscribing!</h1>
           <p>
-            A confirmation email has been sent to <strong>ash@loremcompany.com</strong>.
+            A confirmation email has been sent to <strong><span class="personEmail"></span></strong>.
             Please open it and click the button inside to confirm your subscription.
           </p>
         </div><!--success text-->
 
-        <button class="btn-dimiss">Dismiss message</button>
+        <button class="btn-dimiss" onclick="homePage()">Dismiss message</button>
       </div><!-- success message-->
 
     </div><!-- success main -->

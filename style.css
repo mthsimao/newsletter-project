@@ -3,12 +3,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 :root {
-    --tomato: hsl(4, 100%, 67%);
-    --tomato2:rgb(255, 135, 87);
-    --Dark-Slate-Grey: hsl(234, 29%, 20%);
-    --Charcoal-rey: hsl(235, 18%, 26%);
-    --Grey: hsl(231, 7%, 60%);
-    --White: hsl(0, 0%, 100%);
+    --tomato: #ff6257;
+    --tomato2:#ff8757;
+    --light-red: #f5bab6;
+    --Dark-Slate-Grey: #242742;
+    --Charcoal-rey: #36384e;
+    --Grey: #9294a0;
+    --White: #ffffff;
 
     --font-roboto: "Roboto", 'sans-serif';
 }
@@ -107,6 +108,12 @@ ul li {
 .email-box input::placeholder {
     color: var(--Grey);
     letter-spacing: .5px;
+}
+
+.errorEmail #iemail {
+    border-color: red;
+    color: red;
+    background-color: var(--light-red);
 }
 
 .btn-subscribe, .btn-dimiss {
