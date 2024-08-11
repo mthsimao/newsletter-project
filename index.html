@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
-  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <title>Newsletter | Frontend Mentor</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -15,38 +15,67 @@
   </style>
 </head>
 <body>
+  <main>
+    <!-- Sign-up form start -->
+    <div class="main-card">
 
-  <!-- Sign-up form start -->
+      <div class="card-flex">
 
-  Stay updated!
+        <div class="card-text">
+          <h1>Stay updated!</h1>
 
-  Join 60,000+ product managers receiving monthly updates on:
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
 
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
+          <ul>
+            <li><img src="assets/images/icon-list.svg">Product discovery and building what matters</li>
+            <li><img src="assets/images/icon-list.svg">Measuring to ensure updates are a success</li>
+            <li><img src="assets/images/icon-list.svg">And much more!</li>
+          </ul>
 
-  Email address
-  email@company.com
+          <div class="email-box">
 
-  Subscribe to monthly newsletter
+            <form id="emailForm">
+              <label for="#iemail">Email address</label>
+              <input type="email" name="email" id="iemail" placeholder="email@company.com">
+              
+              <input type="submit" value="Subscribe to monthly newsletter" class="btn-subscribe">
+            </form>
+              
+          </div><!-- email box -->
 
-  <!-- Sign-up form end -->
+        </div><!--card text-->
 
-  <!-- Success message start -->
+        <div class="card-image">
+          <img src="assets/images/illustration-sign-up-desktop.svg" alt="Illustration image">
+        </div><!--card image-->
 
-  Thanks for subscribing!
+      </div><!-- flex -->
 
-  A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.
+    </div><!-- main card -->
+   
+    <!-- Success message start -->
+    <div class="success">
 
-  Dismiss message
+      <div class="success-message">
+      
+        <img src="assets/images/icon-success.svg" class="sc-icon">
+      
+        <div class="success-text">
+          <h1>Thanks for subscribing!</h1>
+          <p>
+            A confirmation email has been sent to <strong>ash@loremcompany.com</strong>.
+            Please open it and click the button inside to confirm your subscription.
+          </p>
+        </div><!--success text-->
 
-  <!-- Success message end -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+        <button class="btn-dimiss">Dismiss message</button>
+      </div><!-- success message-->
+
+    </div><!-- success main -->
+    
+  </main>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
