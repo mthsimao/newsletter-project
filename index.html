@@ -35,10 +35,17 @@
           <div class="email-box">
 
             <form id="emailForm">
-              <label for="#iemail">Email address</label>
-              <input type="text" name="email" id="iemail" placeholder="email@company.com" class="required" >
+
+              <div class="form-text">
+                <label for="iemail">Email address</label>
+                <span class="error">Valid email required</span>
+              </div>
               
-              <input type="submit" value="Subscribe to monthly newsletter" class="btn-subscribe">
+              <div class="form-inputs">
+                <input type="email" name="email" id="iemail" placeholder="email@company.com" class="required" oninput="emailValidate()">
+                
+                <input type="submit" value="Subscribe to monthly newsletter" class="btn-subscribe">
+              </div>
             </form>
               
           </div><!-- email box -->
@@ -46,7 +53,12 @@
         </div><!--card text-->
 
         <div class="card-image">
-          <img src="assets/images/illustration-sign-up-desktop.svg" alt="Illustration image">
+          
+
+          <picture>
+            <source media="(max-width: 930px )" srcset="assets/images/illustration-sign-up-mobile.svg">
+            <img src="assets/images/illustration-sign-up-desktop.svg" alt="Illustration image">
+          </picture>
         </div><!--card image-->
 
       </div><!-- flex -->

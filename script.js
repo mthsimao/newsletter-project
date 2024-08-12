@@ -4,68 +4,75 @@ const btn_dimiss = document.querySelector('.btn-dimiss')
 const main_card = document.querySelector('.main-card')
 const main_message = document.querySelector('.success')
 
-const emailInput = document.querySelector('#iemail')
-const emailForm = document.querySelector('#emailForm')
+let emailInput = document.querySelector('#iemail')
 
-const personEmail = document.querySelector('.personEmail')
+let personEmail = document.querySelector('.personEmail')
 
-/* Event that controls after submit of form
+const msgError = document.querySelector('.error')
 
-emailForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const email = emailInput.value;
-    
-    const isValid = validateEmail(email);
-    
-    if(isValid) {
-        unblockBtn();
-        personEmail.innerHTML = email
-    } else {
-        emailForm.classList.add('errorEmail')
-    }
+// block on the button without email
 
-})
-
-// function validate email
-
-const validateEmail = (email) => {
-    const regex = /^[^\s]+@[^\s]+.[^\s]+$/;
-    return regex.test(email);
+const blockBtn = () => {
+    btn_subscribe.disabled = true
+    btn_subscribe.style.cursor = 'not-allowed'
 }
 
-// function unblock the button
+blockBtn();
+
+// unblock the button
 
 const unblockBtn = () => {
-    main_card.classList.toggle('dn')
-    main_message.classList.toggle('db')
+    personEmail.innerHTML = emailInput.value
+    btn_subscribe.disabled = false
+    btn_subscribe.style.cursor = 'pointer'
 }
 
-function homePage() {
-    unblockBtn();
-}
-
-*/
-
-
-// another tip to validate email
+// Set or Remove error
 
 const emailRegex = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
 const requiredEmail = document.querySelector('.required')
 
 const setError = () => {
-    requiredEmail.style.border = '1px solid red'
+    emailInput.classList.add('errorEmail')
+    msgError.style.display = 'inline-block'
 }
 
 const removeError = () => {
-    requiredEmail.style.border = ''
+    emailInput.classList.remove('errorEmail')
+    msgError.style.display = 'none'
 }
 
-const emailValidate = () => {
-    if(requiredEmail.value.length < 3) {
-        setError();
-    } else {
+// Function email validate
+
+function emailValidate() {
+
+    if(emailRegex.test(requiredEmail.value)) {
         removeError();
+        unblockBtn();
+    } else if(emailInput.value == '') {
+        removeError();
+        blockBtn();
+    } else {
+        setError();
+        blockBtn();
     }
+}
+
+// function to unblock the button
+
+const toggleBtn = () => {
+    main_card.classList.toggle('dn')
+    main_message.classList.toggle('db')
+}
+
+btn_subscribe.addEventListener('click', (event) => {
+    event.preventDefault();
+    toggleBtn();
+})
+
+const homePage = () => {
+    toggleBtn();
+    emailInput.value = ''
 }
 
 

@@ -5,7 +5,7 @@
 :root {
     --tomato: #ff6257;
     --tomato2:#ff8757;
-    --light-red: #f5bab6;
+    --light-red: #f3cac7;
     --Dark-Slate-Grey: #242742;
     --Charcoal-rey: #36384e;
     --Grey: #9294a0;
@@ -67,12 +67,18 @@ main {
     font-size: 16px;
 }
 
+.card-text ul {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 1.4rem;
+}
+
 ul li {
     list-style-type: none;
     display: flex;
     align-items: center;
     gap: 8px;
-    padding-bottom: 10px;
 }
 
 .email-box {
@@ -85,36 +91,58 @@ ul li {
     display: flex;
     flex-direction: column;
     gap: 6px;
-
 }
 
-.email-box label {
+.form-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-text label {
     color: var(--Dark-Slate-Grey);
     font-size: 14px;
     font-weight: bold;
 }
 
-.email-box input {
+.required {
     border: 1px solid var(--Grey);
     border-radius: 5px;
     outline: none;
     padding: 16px;
-}
-
-.email-box input[type=email] {
-    margin-bottom: 1.2rem;
+    font-size: 1rem;
 }
 
 .email-box input::placeholder {
     color: var(--Grey);
     letter-spacing: .5px;
+    font-size: 14px;
 }
 
-.errorEmail #iemail {
-    border-color: red;
-    color: red;
+.errorEmail {
+    border: 1px solid red;
+    color: rgb(250, 51, 51);
     background-color: var(--light-red);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    letter-spacing: .2px;
 }
+
+.error {
+    display: none;
+    color: rgb(255, 51, 51);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+
 
 .btn-subscribe, .btn-dimiss {
     width: 100%;
@@ -132,10 +160,6 @@ ul li {
 .btn-subscribe:hover, .btn-dimiss:hover {
     background: linear-gradient(45deg, rgb(238, 39, 132), var(--tomato2));
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.267);
-}
-
-.error {
-    
 }
 
 .success {
@@ -179,3 +203,49 @@ ul li {
     display: block;
 }
 
+@media screen and (max-width: 930px) {
+    body {
+        background-color: var(--White);
+        height: auto;
+    }
+    .main-card {
+        border-radius: 0;
+        padding: 0;
+    }
+    .card-flex {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 0;
+    }
+    .card-text {
+        max-width: 375px;
+        padding: 2rem;
+        gap: 1.8rem;
+    }
+    .card-text h1 {
+        font-size: 2.2rem;
+    }
+    .card-text p {
+        line-height: 1.4rem;
+    }
+    .card-text ul {
+        display: flex;
+        flex-direction: column;
+        gap: .7rem;
+    }
+    .card-text ul li {
+        gap: 1.1rem;
+        align-items: self-start;
+        font-size: 1rem;
+    }
+    .form-text label {
+        font-size: 12px;
+    }
+    .error {
+        font-size: 11px;
+        letter-spacing: .3px;
+    }
+    .form-inputs {
+        gap: 1.6rem;
+    }
+}
