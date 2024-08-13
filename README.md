@@ -1,6 +1,6 @@
 # Frontend Mentor - Newsletter sign up with success message
 
-![Design preview for the Fylo landing page with two column layout challenge](./assets/images/desktop-preview.jpg)
+![Design preview for the Fylo landing page with two column layout challenge](images/newsletter-image.png)
 
 
 [Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
@@ -13,6 +13,7 @@
 
 - Semantic HTML5 markup
 - CSS Flexbox
+- JavaScript
 
 ## Author
 
