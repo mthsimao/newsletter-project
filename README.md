@@ -9,11 +9,11 @@
 
 - Solution URL: [Solution](https://mthsimao.github.io/newsletter-project)
 
-### Built with
+### 🔨 Tools
 
-- Semantic HTML5 markup
-- CSS Flexbox
-- JavaScript
+- [Html](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+- [Css](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 
 ## Author
 
